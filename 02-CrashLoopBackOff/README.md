@@ -14,7 +14,7 @@ Misconfigurations can encompass a wide range of issues, from incorrect environme
 
 ### Errors in the Liveness Probes
 
-Liveness probes in Kubernetes are used to check the health of a container. If a liveness probe is incorrectly configured, it might falsely report that the container is unhealthy, causing Kubernetes to kill and restart the container repeatedly. For example, if the liveness probe checks a URL or port that the application does not expose or checks too soon before the application is ready, the container will be repeatedly terminated and restarted.
+Liveness probes in Kubernetes are used to check the health of a container. If a liveness probe is incorrectly configured, it might falsely report that the container is unhealthy, causing Kubernetes to kill and restart the container repeatedly. For example, if the liveness probe checks a URL or port that the application does not expose or checks too soon before the application is ready, the container will be repeatedly terminated and restarted. Or let say we have set the periodSeconds: 5 (it will k8s how frequently it has to check the health of a pod).
 
 ### The Memory Limits Are Too Low
 
